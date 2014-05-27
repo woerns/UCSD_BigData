@@ -42,8 +42,8 @@ class MRWeatherCovariance(MRJob):
                         mean = np.array(self.lookup.ix[elements[0],1:365])
                         # Substract mean
                         mvalues = mvalues - mean
-                        for i in xrange(50):
-                            for j in xrange(i,50): 
+                        for i in xrange(365):
+                            for j in xrange(i,365): 
                                 product = mvalues[j]*mvalues[i]
                                 yield ((partitionID,i,j),product/N)
                 else:
