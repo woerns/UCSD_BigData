@@ -8,7 +8,7 @@ import re
 from sys import stderr
 import numpy as np
 
-elementType = 'TMIN'
+elementType = 'TMAX'
 key = 0   # 0 for station, 2 for year
 
 class MRWeatherCountMeasurements(MRJob):
